@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="708,560" caption="0,0,0,25" mininfo="450,300" roundcorner="4,4" >
+    <Font id="0" name="微软雅黑" size="14" bold="false" italic="false" shared="true" default="true" />
+    <Font id="1" name="微软雅黑" size="14" bold="true" italic="false" shared="true" />
+    <Include source="control_default.xml" />
+    <VerticalLayout name="wnd_frame" inset="2,2,2,2" bkimage="file='Backgnd\8.jpg'" bordersize="1" style="DyCtrlColors">
+        <HorizontalLayout name="wnd_caption" inset="0,0,0,0" height="25" style="DyCtrlColors">
+            <VerticalLayout width="30" inset="0,0,0,0">
+                <Label name="logo" width="24" height="24" padding="4,0,0,0" bkimage="vip.png" />
+            </VerticalLayout>
+            <VerticalLayout inset="2,0,2,0">
+                <Label name="frmtitle" text="罗盘钟效果演示(Duilib 自定义控件)" width="368" height="24" font="1" />
+            </VerticalLayout>
+            <HorizontalLayout width="42">
+                <FadeButton name="closebtn" width="38" height="25" tooltip="关闭" normalimage="file='Control\sys_btn_close.png' source='0,0,38,25'" hotimage="file='Control\sys_btn_close.png' source='38,0,76,25'" pushedimage="file='Control\sys_btn_close.png' source='76,0,114,25'" timeinterval="20" frames="10"/>                 
+            </HorizontalLayout>
+        </HorizontalLayout>
+        <VerticalLayout name="wnd_body" inset="2,2,2,2" vscrollbar="true">
+			<WzClock name="w_clock" font="0" textcolor="#ff3300ff" usingchsnum="true" bordersize="1" bordercolor="#FFFFFF00"/>
+        </VerticalLayout>
+    </VerticalLayout>
+</Window>

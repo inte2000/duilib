@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <WEBVIEW2_ROOT>D:\development\webview2.1.0.2420.47</WEBVIEW2_ROOT>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>WebView2Loader.dll.lib;WebView2LoaderStatic.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(WEBVIEW2_ROOT)\lib\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(WEBVIEW2_ROOT)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <PostBuildEvent>
+      <Message>copy WebView2Loader.dll from library directory to project directory</Message>
+      <Command>$(WEBVIEW2_ROOT)\post_build.bat "$(WEBVIEW2_ROOT)\lib\$(PlatformTarget)\WebView2Loader.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="WEBVIEW2_ROOT">
+      <Value>$(WEBVIEW2_ROOT)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

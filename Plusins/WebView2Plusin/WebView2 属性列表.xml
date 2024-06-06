@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controls>
+	<WebView2 parent="Control" notifies="setfocus killfocus timer menu windowinit(root) OnWebView2Created NavigationStarting NavigationCompleted WebMessageReceived FrameNavigationCompleted">
+		<Attribute name="homepage" default="" type="STRING" comment="默认首页" />
+		<Attribute name="autonavi" default="true" type="BOOL" comment="是否打开默认首页" />
+		<Attribute name="scriptEnable" default="true" type="BOOL" comment="是否允许执行script" />
+		<Attribute name="defaultScriptDialogs" default="true" type="BOOL" comment="是否允许默认script对话" />
+		<Attribute name="webMessageEnabled" default="true" type="BOOL" comment="是否允许web message" />
+		<Attribute name="builtInErrorPageEnabled" default="false" type="BOOL" comment="是否允许默认错误页" />
+		<Attribute name="allowExternalDrop" default="false" type="BOOL" comment="是否允许拖拽" />
+		<Attribute name="contextMenusEnabled" default="false" type="BOOL" comment="是否允许右键菜单" />
+		<Attribute name="acceleratorKeysEnabled" default="false" type="BOOL" comment="是否允许快捷键" />
+		<Attribute name="statusBarEnabled" default="false" type="BOOL" comment="是否允许状态栏" />
+		<Attribute name="zoomControlEnabled" default="false" type="BOOL" comment="是否允许放大缩小" />
+		<Attribute name="mustHttps" default="true" type="BOOL" comment="是否必须为https" />
+	</WebView2>
+</Controls>
